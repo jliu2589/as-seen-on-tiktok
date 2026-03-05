@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandarin Context Player</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>Mandarin Context Player</h1>
+          <p>Upload a Mandarin video and get visual context cues while it plays.</p>
+        </div>
+        <label class="upload-btn" for="video-upload">Upload video</label>
+        <input id="video-upload" type="file" accept="video/*" />
+      </header>
+
+      <section class="player-layout">
+        <section class="video-panel">
+          <video id="video-player" controls>
+            Your browser does not support the video tag.
+          </video>
+          <p id="video-status" class="status">No video uploaded yet.</p>
+        </section>
+
+        <aside class="context-panel">
+          <h2>Live Visual Context</h2>
+          <div id="current-context" class="current-context">
+            Upload and play a video to begin.
+          </div>
+
+          <h3>Upcoming Cues</h3>
+          <div id="cue-list" class="cue-list"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
